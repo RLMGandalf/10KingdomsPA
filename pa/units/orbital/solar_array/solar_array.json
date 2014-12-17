@@ -1,0 +1,83 @@
+{
+  "TEMP_texelinfo": 25.0,
+  "attachable": {
+    "offsets": {
+      "root": [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "base_spec": "/pa/units/orbital/base_orbital_structure/base_orbital_structure.json",
+  "build_metal_cost": 900,
+  "description": "!LOC(units:manufacturing_orbital_energy_generation.message):Manufacturing- Orbital energy generation.",
+  "display_name": "!LOC(units:solar_array.message):Solar Array",
+  "enable_orbital_shell": true,
+  "events": {
+    "build_complete": {
+      "audio_cue": "/SE/Build_Complete/orbital"
+    },
+    "died": {
+      "audio_cue": "/SE/Death/orbital",
+      "effect_scale": 1.5
+    },
+    "fired": {
+      "audio_cue": "/SE/Weapons/air/bomber_fire"
+    }
+  },
+  "max_health": 300,
+  "mesh_bounds": [
+    50,
+    15,
+    6
+  ],
+  "model": {
+    "animations": {
+      "closed": "/pa/units/orbital/solar_array/solar_array_anim_closed.papa",
+      "deploy": "/pa/units/orbital/solar_array/solar_array_anim_deploy.papa",
+      "open": "/pa/units/orbital/solar_array/solar_array_anim_open.papa"
+    },
+    "animtree": "/pa/anim/anim_trees/satellite_launched_anim_tree.json",
+    "filename": "/pa/units/orbital/solar_array/solar_array.papa"
+  },
+  "production": {
+    "energy": 1200
+  },
+  "physics": {
+    "collision_layers": "WL_Orbital",
+    "gravity_scalar": 0.001,
+    "push_class": 50,
+    "radius": 15
+  },
+  "placement_size": [
+    50,
+    50
+  ],
+  "recon": {
+    "observer": {
+      "items": [
+        {
+          "channel": "sight",
+          "layer": "orbital",
+          "radius": 100,
+          "shape": "sphere"
+        },
+        {
+          "channel": "radar",
+          "layer": "surface_and_air",
+          "radius": 100,
+          "shape": "sphere"
+        }
+      ]
+    }
+  },
+  "spawn_layers": "WL_Orbital",
+  "unit_types": [
+    "UNITTYPE_Structure",
+    "UNITTYPE_Orbital",
+    "UNITTYPE_EnergyProduction",
+    "UNITTYPE_Advanced",
+    "UNITTYPE_FabOrbBuild"
+  ]
+}

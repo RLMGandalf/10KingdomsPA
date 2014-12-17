@@ -1,0 +1,146 @@
+{
+  "TEMP_texelinfo": 21.4256,
+  "area_build_type": "Sphere",
+  "atrophy_cool_down": 15.0,
+  "atrophy_rate": 7.5,
+  "audio": {
+    "selection_response": {
+      "cue": "/SE/Selection/structure/metal"
+    }
+  },
+  "base_spec": "/pa/units/orbital/base_orbital_structure/base_orbital_structure.json",
+  "build_metal_cost": 450,
+  "description": "!LOC(units:manufacturing_increases_maximum_metal_storage_capacity.message):Manufacturing- Increases maximum metal storage capacity.",
+  "display_name": "!LOC(units:metal_storage.message):Metal Storage",
+  "si_name": "metal_storage",
+  "enable_orbital_shell": true,
+  "events": {
+    "build_complete": {
+      "audio_cue": "/SE/Build_Complete/metal"
+    },
+    "died": {
+      "audio_cue": "/SE/Death/Factory",
+      "effect_scale": 0.8
+    }
+  },
+  "headlights": [
+    {
+      "color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "far_distance": 25.0,
+      "gobo": "/pa/effects/textures/gobo/spotlight_gobo.papa",
+      "intensity": 2.0,
+      "near_distance": 5.0,
+      "near_height": 8,
+      "near_width": 8,
+      "offset": [
+        0.0,
+        -9.63,
+        13.0
+      ],
+      "orientation": [
+        0.0,
+        23.0,
+        0.0
+      ]
+    }
+  ],
+  "lamps": [
+    {
+      "color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "intensity": 1.0,
+      "offset": [
+        2.5,
+        9.59,
+        8.54
+      ],
+      "radius": 11.0
+    },
+    {
+      "color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "intensity": 1.0,
+      "offset": [
+        -2.5,
+        9.59,
+        8.54
+      ],
+      "radius": 11.0
+    },
+    {
+      "color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "intensity": 3.0,
+      "offset": [
+        0.0,
+        -9.63,
+        13.0
+      ],
+      "radius": 4.0
+    }
+  ],
+  "max_health": 600,
+  "mesh_bounds": [
+    18,
+    18,
+    17.151
+  ],
+  "model": [
+    {
+      "filename": "/pa/units/land/metal_storage/metal_storage.papa",
+      "layer": "WL_Orbital"
+    }
+  ],
+  "physics": {
+    "collision_layers": "WL_Orbital",
+    "gravity_scalar": 0.001,
+    "push_class": 50,
+    "radius": 15
+  },
+  "placement_size": [
+    50,
+    50
+  ],
+  "recon": {
+    "observer": {
+      "items": [
+        {
+          "channel": "sight",
+          "layer": "surface_and_air",
+          "radius": 100,
+          "shape": "capsule"
+        },
+        {
+          "channel": "sight",
+          "layer": "orbital",
+          "radius": 100,
+          "shape": "capsule"
+        }
+      ]
+    }
+  },
+  "spawn_layers": "WL_Orbital",
+  "storage": {
+    "metal": 4000
+  },
+  "unit_types": [
+    "UNITTYPE_Structure",
+    "UNITTYPE_Basic",
+    "UNITTYPE_Orbital",
+    "UNITTYPE_FabOrbBuild",
+    "UNITTYPE_Economy"
+  ]
+}
